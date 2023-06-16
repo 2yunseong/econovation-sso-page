@@ -15,7 +15,7 @@ export const FormInputElement = styled.input<FormInputElementProps>`
   font-size: 20px;
   border: none;
   border-bottom: 1px solid ${(props) => (props.isError ? '#dc0000' : 'black')};
-
+  padding: 13px 0;
   &:focus {
     outline: 0;
   }
