@@ -2,6 +2,10 @@ import { createGlobalStyle } from 'styled-components';
 
 const ResetStyle = createGlobalStyle`
   /* Box sizing rules */
+
+  html {
+    font-size: 62.5%;
+  }
   *,
   *::before,
   *::after {
