@@ -1,7 +1,7 @@
 import { styled } from 'styled-components';
-import { LoginButtonProps } from './LoginButton';
+import { ButtonProps } from './Button';
 
-export const LoginButton = styled.button<LoginButtonProps>`
+export const Button = styled.button<Pick<ButtonProps, 'isValid'>>`
   cursor: pointer;
   outline: none;
   width: 576px;

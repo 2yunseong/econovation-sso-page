@@ -3,7 +3,7 @@ import { Layout, SubTitle, Title } from '../style/common/Layout';
 import FormInput from '../components/common/FormInput';
 import { INVALID_INPUT_MESSAGE } from '../constant/constant';
 import { useLogin } from '../hooks/useLogin';
-import LoginButton from '../components/Login/LoginButton';
+import Button from '../components/common/Button';
 import Spacing from '../style/common/Spacing';
 
 const LoginPage = () => {
@@ -34,9 +34,10 @@ const LoginPage = () => {
         errorMessage={INVALID_INPUT_MESSAGE.PASSWORD}
       />
       <Spacing size={74} />
-      <LoginButton
+      <Button
         onClick={requestLogin}
         isValid={email.status === 'VALID' && password.status === 'VALID'}
+        label="로그인"
       />
     </Layout>
   );

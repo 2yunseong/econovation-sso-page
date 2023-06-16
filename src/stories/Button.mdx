@@ -1,0 +1,22 @@
+import { Canvas, Meta } from '@storybook/blocks';
+import * as ButtonStories from './Button.stories';
+
+<Meta of={ButtonStories} />
+
+# 버튼
+
+버튼은 유효한 상태에 따라 다른 UI를 제공합니다.
+
+여기서 **유효한 상태**란, 입력값이 서버에 로그인 요청을 보낼 수 있는 등의 상태를 의미합니다.
+
+## 유효한 상태
+
+유효한 상태 시 버튼이 활성색깔을 나타냅니다.
+
+<Canvas of={ButtonStories.Enabled} />
+
+## 유효하지 않은 상태
+
+유효하지 않은 상태시 비활성색깔로 나타냅니다.
+
+<Canvas of={ButtonStories.Disabled} />
