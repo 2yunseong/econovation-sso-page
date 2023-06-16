@@ -11,9 +11,12 @@ export const useLogin = () => {
   const [password, setPasswordValue, setPasswordStatus] = useInput();
 
   useEffect(() => {
-    setEmailStatus(
-      email.value.length !== 0 && validEmail(email.value) ? 'VALID' : 'INIT'
-    );
+    if (email.value.length === 0) {
+      setEmailStatus('INIT');
+    } else {
+      setEmailStatus(validEmail(email.value) ? 'VALID' : 'ERROR');
+    }
+
     setPasswordStatus(password.value.length !== 0 ? 'VALID' : 'INIT');
   }, [email.value, password.value]);
   const requestLogin = () => {
